@@ -4,10 +4,31 @@ const chai = require('chai')
 const should = chai.should()
 const chaiHttp = require('chai-http')
 const server = require('../app.js')
+const knex = require('../db/knex.js')
 
 chai.use(chaiHttp)
 
 describe('API routes', () => {
+  beforeEach((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        knex.migrate.latest()
+          .then(() => {
+            knex.seed.run()
+              .then(() => {
+                done()
+              })
+          })
+      })
+  })
+
+  afterEach((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done()
+      })
+  })
+
   it('should return all shows', (done) => {
     chai.request(server)
       .get('/api/v1/shows')
