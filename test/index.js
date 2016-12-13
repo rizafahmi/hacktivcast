@@ -19,7 +19,7 @@ describe('API routes', () => {
         res.body[0].should.have.property('title')
         res.body[0].title.should.equal('HACKTIVcast Series')
         res.body[0].should.have.property('description')
-        res.body[0].description.should.equal('HACTIVcast Labs')
+        res.body[0].description.should.equal('Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait')
 
         done()
       })
