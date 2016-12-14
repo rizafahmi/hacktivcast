@@ -86,4 +86,24 @@ describe('API routes', () => {
       done()
     })
   })
+
+  describe('PUT /api/v1/shows/:id', () => {
+    it('should update a show', (done) => {
+      chai.request(server)
+        .put('/api/v1/shows/1')
+        .send({
+          description: 'Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.'
+        })
+        .end((err, res) => {
+          res.should.have.status(200)
+          res.should.be.json
+          res.body.should.be.a('object')
+          res.body.should.have.property('title')
+          res.body.title.should.equal('HACKTIVcast')
+          res.body.should.have.property('description')
+          res.body.description.should.equal('Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.')
+          done()
+        })
+    })
+  })
 })
