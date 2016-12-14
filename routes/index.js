@@ -82,4 +82,12 @@ router.delete('/shows/:id', (req, res, next) => {
     })
 })
 
+/* GET /api/v1/episodes_by_show_id/:id */
+router.get('/episodes_by_show_id/:id', (req, res, next) => {
+  queries.getEpisodes(req.params.id)
+    .then((episodes) => {
+      res.status(200).json(episodes)
+    })
+})
+
 module.exports = router

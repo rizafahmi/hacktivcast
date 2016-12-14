@@ -155,15 +155,17 @@ describe('API routes', () => {
     })
   })
 
-  describe('GET /api/v1/:show_id/episodes', () => {
-    it('should return all episodes for certain show id', () => {
+  describe('GET /api/v1/episodes_by_show_id/:show_id', () => {
+    it('should return all episodes for certain show id', (done) => {
       chai.request(server)
-        .get('/api/v1/1/episodes')
+        .get('/api/v1/episodes_by_show_id/1')
         .end((err, res) => {
           res.should.have.status(200)
           res.should.be.json
-          res.body.should.be.a('object')
+          res.body.should.be.a('array')
           res.body[0].should.have.property('title')
+          res.body[0].title.should.equal('Title 1')
+          res.body[1].title.should.equal('Title 3')
           res.body[0].should.have.property('body')
           res.body[0].should.have.property('url')
           res.body[0].should.have.property('episode_number')

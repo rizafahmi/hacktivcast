@@ -4,6 +4,10 @@ const Shows = () => {
   return knex('shows')
 }
 
+const Episodes = () => {
+  return knex('episodes')
+}
+
 const getAll = () => {
   return Shows().select()
     .orderBy('id', 'asc')
@@ -25,10 +29,16 @@ const deleteShow = (showId) => {
   return Shows().where('id', parseInt(showId)).del()
 }
 
+const getEpisodes = (showId) => {
+  return Episodes().where('show_id', parseInt(showId))
+    .orderBy('episode_number', 'asc')
+}
+
 module.exports = {
   getAll: getAll,
   getSingle: getSingle,
   add: add,
   update: update,
-  deleteShow: deleteShow
+  deleteShow: deleteShow,
+  getEpisodes: getEpisodes
 }
