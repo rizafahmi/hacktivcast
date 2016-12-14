@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "test": "mocha",
+    "test:watch": "mocha --watch"
   },
   "dependencies": {
     "body-parser": "1.15.2",
