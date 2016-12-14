@@ -1,4 +1,5 @@
 import React from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const Menu = require('./Menu.js')
 const Description = require('./Description.js')
@@ -11,11 +12,13 @@ class App extends React.Component {
 
   render () {
     return (
-      <div className='ma60'>
-        <Menu />
-        <Description />
-        <Shows />
-      </div>
+      <MuiThemeProvider>
+        <div>
+          <Menu />
+          <Description />
+          <Shows />
+        </div>
+      </MuiThemeProvider>
     )
   }
 }

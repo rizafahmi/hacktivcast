@@ -11,7 +11,6 @@
     "webpack:watch": "webpack -w"
   },
   "dependencies": {
-    "antd": "beta",
     "babel-loader": "6.2.9",
     "babel-plugin-transform-class-properties": "^6.19.0",
     "babel-plugin-transform-runtime": "^6.15.0",
@@ -25,11 +24,13 @@
     "debug": "2.2.0",
     "express": "4.14.0",
     "knex": "0.12.6",
+    "material-ui": "^0.16.5",
     "morgan": "1.7.0",
     "pg": "6.1.1",
     "pug": "2.0.0-beta6",
     "react": "15.4.1",
     "react-dom": "15.4.1",
+    "react-tap-event-plugin": "^2.0.1",
     "serve-favicon": "2.3.0",
     "webpack": "1.14.0"
   },
