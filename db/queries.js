@@ -13,7 +13,12 @@ const getSingle = (showId) => {
   return Shows().where('id', parseInt(showId)).first()
 }
 
+const add = (show) => {
+  return Shows().insert(show, 'id')
+}
+
 module.exports = {
   getAll: getAll,
-  getSingle: getSingle
+  getSingle: getSingle,
+  add: add
 }

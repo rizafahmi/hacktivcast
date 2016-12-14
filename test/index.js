@@ -64,5 +64,26 @@ describe('API routes', () => {
         })
       done()
     })
+  }) // end describe
+
+  describe('POST /api/v1/shows', () => {
+    it('should add a show', (done) => {
+      chai.request(server)
+        .post('/api/v1/shows')
+        .send({
+          title: 'Podcast',
+          description: 'Podcast tentang fullstack technology'
+        })
+        .end((err, res) => {
+          res.should.have.status(200)
+          res.should.be.json
+          res.should.be.a('object')
+          res.body.should.have.property('title')
+          res.body.title.should.equal('Podcast')
+          res.body.should.have.property('description')
+          res.body.description.should.equal('Podcast tentang fullstack technology')
+        })
+      done()
+    })
   })
 })
