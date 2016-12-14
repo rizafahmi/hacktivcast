@@ -21,9 +21,14 @@ const update = (showId, updates) => {
   return Shows().where('id', parseInt(showId)).update(updates)
 }
 
+const deleteShow = (showId) => {
+  return Shows().where('id', parseInt(showId)).del()
+}
+
 module.exports = {
   getAll: getAll,
   getSingle: getSingle,
   add: add,
-  update: update
+  update: update,
+  deleteShow: deleteShow
 }

@@ -65,4 +65,21 @@ router.put('/shows/:id', (req, res, next) => {
     })
 })
 
+/* DELETE /api/v1/shows/1 */
+router.delete('/shows/:id', (req, res, next) => {
+  queries.getSingle(req.params.id)
+    .then((show) => {
+      queries.deleteShow(req.params.id)
+        .then(() => {
+          res.status(200).json(show)
+        })
+        .catch((err) => {
+          next(err)
+        })
+    })
+    .catch((err) => {
+      next(err)
+    })
+})
+
 module.exports = router

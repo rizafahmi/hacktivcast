@@ -125,4 +125,33 @@ describe('API routes', () => {
         })
     })
   })
+
+  describe('DELETE /api/v1/shows/:id', () => {
+    it('should delete a show', (done) => {
+      chai.request(server)
+        .delete('/api/v1/shows/1')
+        .end((err, res) => {
+          res.should.have.status(200)
+          res.should.be.json
+          res.body.should.be.a('object')
+          res.body.should.have.property('title')
+          res.body.title.should.equal('HACKTIVcast Series')
+          res.body.should.have.property('description')
+
+          chai.request(server)
+            .get('/api/v1/shows')
+            .end((getErr, getRes) => {
+              getRes.should.have.status(200)
+              getRes.should.be.json
+              getRes.body.should.be.a('array')
+              getRes.body.length.should.equal(1)
+              getRes.body[0].should.have.property('title')
+              getRes.body[0].title.should.equal('HACKTIVcast Labs')
+              getRes.body[0].should.have.property('description')
+
+              done()
+            })
+        })
+    })
+  })
 })
