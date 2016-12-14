@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container } from 'rebass'
 
 const Menu = require('./Menu.js')
 const Description = require('./Description.js')
@@ -11,11 +12,10 @@ class App extends React.Component {
 
   render () {
     return (
-      <div className='ma60'>
-        <Menu />
+      <Container>
         <Description />
         <Shows />
-      </div>
+      </Container>
     )
   }
 }

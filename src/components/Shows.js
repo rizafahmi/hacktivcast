@@ -1,18 +1,30 @@
 import React from 'react'
+import { Card, CardImage, Heading, Text } from 'rebass'
+import { Flex, Box } from 'reflexbox'
 
 class Shows extends React.Component {
   render () {
     return (
-      <div>
-        <ul>
-          <li>
-            Show #1
-          </li>
-          <li>
-            Show #2
-          </li>
-        </ul>
-      </div>
+      <Flex align='center' wrap justify='space-between'>
+        <Card rounded width={418}>
+          <CardImage src='http://placehold.it/512/08e/fff' />
+          <Heading level={3} size={3}>
+            HACKTIVcast Series
+          </Heading>
+          <Text>
+            Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.
+          </Text>
+        </Card>
+        <Card rounded width={418}>
+          <CardImage src='http://placehold.it/512/08e/fff' />
+          <Heading level={3} size={3}>
+            HACKTIVcast Labs
+          </Heading>
+          <Text>
+            HACKTIVcast Labs adalah sebuah _unscripted live coding session_ dengan para expert, technology enthusiast dan coder professional.
+          </Text>
+        </Card>
+      </Flex>
     )
   }
 }

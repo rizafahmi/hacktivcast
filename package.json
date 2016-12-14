@@ -30,6 +30,8 @@
     "pug": "2.0.0-beta6",
     "react": "15.4.1",
     "react-dom": "15.4.1",
+    "rebass": "^0.3.3",
+    "reflexbox": "^2.2.3",
     "serve-favicon": "2.3.0",
     "webpack": "1.14.0"
   },
