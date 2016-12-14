@@ -29,20 +29,40 @@ describe('API routes', () => {
       })
   })
 
-  it('should return all shows', (done) => {
-    chai.request(server)
-      .get('/api/v1/shows')
-      .end((err, res) => {
-        res.should.have.status(200)
-        res.should.be.json
-        res.body.should.be.a('array')
-        res.body.length.should.equal(2)
-        res.body[0].should.have.property('title')
-        res.body[0].title.should.equal('HACKTIVcast Series')
-        res.body[0].should.have.property('description')
-        res.body[0].description.should.equal('Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait')
+  describe('GET /api/v1/shows', () => {
 
-        done()
-      })
+    it('should return all shows', (done) => {
+      chai.request(server)
+        .get('/api/v1/shows')
+        .end((err, res) => {
+          res.should.have.status(200)
+          res.should.be.json
+          res.body.should.be.a('array')
+          res.body.length.should.equal(2)
+          res.body[0].should.have.property('title')
+          res.body[0].title.should.equal('HACKTIVcast Series')
+          res.body[0].should.have.property('description')
+          res.body[0].description.should.equal('Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait')
+
+          done()
+        })
+    })
+  })
+
+  describe('GET /api/v1/shows/:id', () => {
+    it('should return one show', (done) => {
+      chai.request(server)
+        .get('/api/v1/shows/1')
+        .end((err, res) => {
+          res.should.have.status(200)
+          res.should.be.json
+          res.body.should.be.a('object')
+          res.body.should.have.property('title')
+          res.body.title.should.equal('HACKTIVcast Series')
+          res.body.should.have.property('description')
+          res.body.description.should.equal('Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait')
+        })
+      done()
+    })
   })
 })

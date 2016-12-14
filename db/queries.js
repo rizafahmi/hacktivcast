@@ -9,6 +9,11 @@ const getAll = () => {
     .orderBy('id', 'asc')
 }
 
+const getSingle = (showId) => {
+  return Shows().where('id', parseInt(showId)).first()
+}
+
 module.exports = {
-  getAll: getAll
+  getAll: getAll,
+  getSingle: getSingle
 }
