@@ -12,7 +12,7 @@ const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'jade')
+app.set('view engine', 'pug')
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
@@ -23,6 +23,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use('/tachyons', express.static(path.join(__dirname, 'node_modules/tachyons')))
 
 app.use('/', frontend)
 app.use('/api/v1', api)
