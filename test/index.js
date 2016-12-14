@@ -106,4 +106,23 @@ describe('API routes', () => {
         })
     })
   })
+
+  describe('PUT /api/v1/shows/:id', () => {
+    it('should not update a show if id is updated', (done) => {
+      chai.request(server)
+        .put('/api/v1/shows/1')
+        .send({
+          id: 22,
+          description: 'Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.'
+        })
+        .end((err, res) => {
+          res.should.have.status(422)
+          res.should.be.json
+          res.body.should.be.a('object')
+          res.body.should.have.property('status')
+          res.body.status.should.equal('KO')
+          done()
+        })
+    })
+  })
 })
