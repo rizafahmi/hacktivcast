@@ -61,8 +61,8 @@ describe('API routes', () => {
           res.body.title.should.equal('HACKTIVcast Series')
           res.body.should.have.property('description')
           res.body.description.should.equal('Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait')
+          done()
         })
-      done()
     })
   }) // end describe
 
@@ -82,8 +82,8 @@ describe('API routes', () => {
           res.body.title.should.equal('Podcast')
           res.body.should.have.property('description')
           res.body.description.should.equal('Podcast tentang fullstack technology')
+          done()
         })
-      done()
     })
   })
 
@@ -99,7 +99,7 @@ describe('API routes', () => {
           res.should.be.json
           res.body.should.be.a('object')
           res.body.should.have.property('title')
-          res.body.title.should.equal('HACKTIVcast')
+          res.body.title.should.equal('HACKTIVcast Series')
           res.body.should.have.property('description')
           res.body.description.should.equal('Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.')
           done()

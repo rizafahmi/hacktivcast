@@ -45,4 +45,18 @@ router.post('/shows', (req, res, next) => {
     })
 })
 
+/* PUT a show */
+router.put('/shows/:id', (req, res, next) => {
+  queries.update(req.params.id, req.body)
+    .then(() => {
+      return queries.getSingle(req.params.id)
+    })
+    .then((show) => {
+      res.status(200).json(show)
+    })
+    .catch((err) => {
+      next(err)
+    })
+})
+
 module.exports = router
