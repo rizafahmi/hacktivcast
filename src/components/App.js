@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'rebass'
+import { Container, Footer } from 'rebass'
 
 const Menu = require('./Menu.js')
 const Description = require('./Description.js')
@@ -15,6 +15,9 @@ class App extends React.Component {
       <Container>
         <Description />
         <Shows />
+        <Footer>
+          © 2016 HACKTIV8
+        </Footer>
       </Container>
     )
   }

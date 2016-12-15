@@ -21520,7 +21520,12 @@
 	        _rebass.Container,
 	        null,
 	        _react2.default.createElement(Description, null),
-	        _react2.default.createElement(Shows, null)
+	        _react2.default.createElement(Shows, null),
+	        _react2.default.createElement(
+	          _rebass.Footer,
+	          null,
+	          '\xA9 2016 HACKTIV8'
+	        )
 	      );
 	    }
 	  }]);
@@ -23382,6 +23387,19 @@
 	            _rebass.Text,
 	            null,
 	            'Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.'
+	          ),
+	          _react2.default.createElement(
+	            _rebass.Block,
+	            null,
+	            _react2.default.createElement(
+	              _rebass.Button,
+	              {
+	                href: '#',
+	                backgroundColor: 'warning',
+	                big: true,
+	                rounded: true },
+	              'View'
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
