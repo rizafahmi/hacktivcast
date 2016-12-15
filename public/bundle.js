@@ -23354,9 +23354,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _rebass = __webpack_require__(393);
-
 	var _reflexbox = __webpack_require__(461);
+
+	var _Show = __webpack_require__(481);
+
+	var _Show2 = _interopRequireDefault(_Show);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23374,49 +23376,7 @@
 	      return _react2.default.createElement(
 	        _reflexbox.Flex,
 	        { align: 'center', wrap: true, justify: 'space-between' },
-	        _react2.default.createElement(
-	          _rebass.Card,
-	          { rounded: true, width: 418 },
-	          _react2.default.createElement(_rebass.CardImage, { src: 'http://placehold.it/512/08e/fff' }),
-	          _react2.default.createElement(
-	            _rebass.Heading,
-	            { level: 3, size: 3 },
-	            'HACKTIVcast Series'
-	          ),
-	          _react2.default.createElement(
-	            _rebass.Text,
-	            null,
-	            'Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.'
-	          ),
-	          _react2.default.createElement(
-	            _rebass.Block,
-	            null,
-	            _react2.default.createElement(
-	              _rebass.Button,
-	              {
-	                href: '#',
-	                backgroundColor: 'warning',
-	                big: true,
-	                rounded: true },
-	              'View'
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _rebass.Card,
-	          { rounded: true, width: 418 },
-	          _react2.default.createElement(_rebass.CardImage, { src: 'http://placehold.it/512/08e/fff' }),
-	          _react2.default.createElement(
-	            _rebass.Heading,
-	            { level: 3, size: 3 },
-	            'HACKTIVcast Labs'
-	          ),
-	          _react2.default.createElement(
-	            _rebass.Text,
-	            null,
-	            'HACKTIVcast Labs adalah sebuah _unscripted live coding session_ dengan para expert, technology enthusiast dan coder professional.'
-	          )
-	        )
+	        _react2.default.createElement(_Show2.default, { id: 1 })
 	      );
 	    }
 	  }]);
@@ -31410,6 +31370,84 @@
 	var Reflex = (0, _withReflex2.default)();
 
 	exports.default = Reflex;
+
+/***/ },
+/* 481 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _getPrototypeOf = __webpack_require__(179);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(205);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(206);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(210);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(257);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _rebass = __webpack_require__(393);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Show = function (_React$Component) {
+	  (0, _inherits3.default)(Show, _React$Component);
+
+	  function Show() {
+	    (0, _classCallCheck3.default)(this, Show);
+	    return (0, _possibleConstructorReturn3.default)(this, (Show.__proto__ || (0, _getPrototypeOf2.default)(Show)).apply(this, arguments));
+	  }
+
+	  (0, _createClass3.default)(Show, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        _rebass.Card,
+	        { rounded: true, width: 418 },
+	        _react2.default.createElement(_rebass.CardImage, { src: 'http://placehold.it/512/08e/fff' }),
+	        _react2.default.createElement(
+	          _rebass.Heading,
+	          { level: 3, size: 3, style: { marginBottom: 20 } },
+	          'HACKTIVcast Series'
+	        ),
+	        _react2.default.createElement(
+	          _rebass.Text,
+	          { style: { marginBottom: 20 } },
+	          'Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.'
+	        ),
+	        _react2.default.createElement(
+	          _rebass.Button,
+	          {
+	            href: '#',
+	            backgroundColor: 'warning',
+	            big: true,
+	            pill: true,
+	            style: { display: 'block', textAlign: 'center' },
+	            rounded: true },
+	          'Watch'
+	        )
+	      );
+	    }
+	  }]);
+	  return Show;
+	}(_react2.default.Component);
+
+	module.exports = Show;
 
 /***/ }
 /******/ ]);
