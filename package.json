@@ -11,6 +11,7 @@
     "webpack:watch": "webpack -w"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "babel-loader": "6.2.9",
     "babel-plugin-transform-class-properties": "^6.19.0",
     "babel-plugin-transform-runtime": "^6.15.0",
@@ -30,7 +31,8 @@
     "pug": "2.0.0-beta6",
     "react": "15.4.1",
     "react-dom": "15.4.1",
-    "react-tap-event-plugin": "^2.0.1",
+    "rebass": "^0.3.3",
+    "reflexbox": "^2.2.3",
     "serve-favicon": "2.3.0",
     "webpack": "1.14.0"
   },

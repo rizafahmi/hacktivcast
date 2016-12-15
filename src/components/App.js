@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+=======
+import { Container, Footer } from 'rebass'
+>>>>>>> use-rebass
 
 const Menu = require('./Menu.js')
 const Description = require('./Description.js')
@@ -12,6 +16,7 @@ class App extends React.Component {
 
   render () {
     return (
+<<<<<<< HEAD
       <MuiThemeProvider>
         <div>
           <Menu />
@@ -19,6 +24,15 @@ class App extends React.Component {
           <Shows />
         </div>
       </MuiThemeProvider>
+=======
+      <Container>
+        <Description />
+        <Shows />
+        <Footer>
+          © 2016 HACKTIV8
+        </Footer>
+      </Container>
+>>>>>>> use-rebass
     )
   }
 }
