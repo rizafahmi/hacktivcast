@@ -4,24 +4,45 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www",
-    "test": "mocha",
-    "test:watch": "mocha --watch"
+    "start:watch": "nodemon ./bin/www",
+    "dev": "concurrently --kill-others \"yarn webpack:watch\" \"yarn start:watch\"",
+    "test": "mocha ./test/",
+    "test:watch": "mocha --watch ./test/",
+    "webpack:watch": "webpack -w",
+    "test:react": "mocha --require ./mocha_runner.js ./src/components/*.test.js",
+    "test:react:watch": "mocha --require ./mocha_runner.js --watch ./src/components/*.test.js"
   },
   "dependencies": {
+    "axios": "0.15.3",
+    "babel-loader": "6.2.9",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
     "body-parser": "1.15.2",
     "cookie-parser": "1.4.3",
     "debug": "2.2.0",
+    "enzyme": "^2.6.0",
     "express": "4.14.0",
-    "jade": "1.11.0",
     "knex": "0.12.6",
     "morgan": "1.7.0",
     "pg": "6.1.1",
-    "serve-favicon": "2.3.0"
+    "pug": "2.0.0-beta6",
+    "react": "15.4.1",
+    "react-addons-test-utils": "^15.4.1",
+    "react-dom": "15.4.1",
+    "serve-favicon": "2.3.0",
+    "webpack": "1.14.0"
   },
   "devDependencies": {
     "chai": "3.5.0",
     "chai-http": "3.0.0",
-    "mocha": "3.2.0"
+    "concurrently": "^3.1.0",
+    "jsdom": "^9.8.3",
+    "mocha": "3.2.0",
+    "tachyons": "4.6.1"
   }
 }
