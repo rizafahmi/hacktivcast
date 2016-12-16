@@ -6,9 +6,10 @@
     "start": "node ./bin/www",
     "start:watch": "nodemon ./bin/www",
     "dev": "concurrently --kill-others \"yarn webpack:watch\" \"yarn start:watch\"",
-    "test": "mocha",
+    "test": "mocha ./test/",
     "test:watch": "mocha --watch ./test/",
     "webpack:watch": "webpack -w",
+    "test:react": "mocha --require ./mocha_runner.js ./src/components/*.test.js",
     "test:react:watch": "mocha --require ./mocha_runner.js --watch ./src/components/*.test.js"
   },
   "dependencies": {
