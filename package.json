@@ -7,8 +7,9 @@
     "start:watch": "nodemon ./bin/www",
     "dev": "concurrently --kill-others \"yarn webpack:watch\" \"yarn start:watch\"",
     "test": "mocha",
-    "test:watch": "mocha --watch",
-    "webpack:watch": "webpack -w"
+    "test:watch": "mocha --watch ./test/backend/",
+    "webpack:watch": "webpack -w",
+    "test:react": "mocha ./test/.setup.js --watch ./test/frontend/*.js"
   },
   "dependencies": {
     "axios": "0.15.3",
@@ -23,12 +24,14 @@
     "body-parser": "1.15.2",
     "cookie-parser": "1.4.3",
     "debug": "2.2.0",
+    "enzyme": "^2.6.0",
     "express": "4.14.0",
     "knex": "0.12.6",
     "morgan": "1.7.0",
     "pg": "6.1.1",
     "pug": "2.0.0-beta6",
     "react": "15.4.1",
+    "react-addons-test-utils": "^15.4.1",
     "react-dom": "15.4.1",
     "serve-favicon": "2.3.0",
     "webpack": "1.14.0"
@@ -37,6 +40,7 @@
     "chai": "3.5.0",
     "chai-http": "3.0.0",
     "concurrently": "^3.1.0",
+    "jsdom": "^9.8.3",
     "mocha": "3.2.0",
     "tachyons": "4.6.1"
   }
