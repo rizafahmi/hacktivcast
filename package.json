@@ -7,9 +7,9 @@
     "start:watch": "nodemon ./bin/www",
     "dev": "concurrently --kill-others \"yarn webpack:watch\" \"yarn start:watch\"",
     "test": "mocha",
-    "test:watch": "mocha --watch ./test/backend/",
+    "test:watch": "mocha --watch ./test/",
     "webpack:watch": "webpack -w",
-    "test:react": "mocha --require ./test/.setup.js --watch ./test/frontend/*.js"
+    "test:react:watch": "mocha --require ./mocha_runner.js --watch ./src/components/*.test.js"
   },
   "dependencies": {
     "axios": "0.15.3",
