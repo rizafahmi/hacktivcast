@@ -25,14 +25,11 @@
     "debug": "2.2.0",
     "express": "4.14.0",
     "knex": "0.12.6",
-    "material-ui": "^0.16.5",
     "morgan": "1.7.0",
     "pg": "6.1.1",
     "pug": "2.0.0-beta6",
     "react": "15.4.1",
     "react-dom": "15.4.1",
-    "rebass": "^0.3.3",
-    "reflexbox": "^2.2.3",
     "serve-favicon": "2.3.0",
     "webpack": "1.14.0"
   },
@@ -40,6 +37,7 @@
     "chai": "3.5.0",
     "chai-http": "3.0.0",
     "concurrently": "^3.1.0",
-    "mocha": "3.2.0"
+    "mocha": "3.2.0",
+    "tachyons": "4.6.1"
   }
 }
