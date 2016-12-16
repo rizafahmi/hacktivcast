@@ -21500,8 +21500,9 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Menu = __webpack_require__(265);
-	// const Description = require('./Description.js')
-	// const Shows = require('./Shows.js')
+	var Description = __webpack_require__(266);
+	var Shows = __webpack_require__(267);
+	var Footer = __webpack_require__(268);
 
 	var App = function (_React$Component) {
 	  (0, _inherits3.default)(App, _React$Component);
@@ -21517,7 +21518,10 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: '' },
-	        _react2.default.createElement(Menu, null)
+	        _react2.default.createElement(Menu, null),
+	        _react2.default.createElement(Description, null),
+	        _react2.default.createElement(Shows, null),
+	        _react2.default.createElement(Footer, null)
 	      );
 	    }
 	  }]);
@@ -23101,7 +23105,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'header',
-	        { className: 'w-100 pa3 ph5-ns bg-gold' },
+	        { className: 'w-100 pa3 ph5-ns bg-orange' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'db dt-ns mw9 center w-100' },
@@ -23110,7 +23114,7 @@
 	            { className: 'db dtc-ns v-mid tl w-50' },
 	            _react2.default.createElement(
 	              'a',
-	              { className: 'dib f5 f4-ns fw6 mt0 mb1 link mid-gray', href: '/' },
+	              { className: 'dib f5 f4-ns fw6 mt0 mb1 link black', href: '/' },
 	              'HACKTIVcast ',
 	              _react2.default.createElement(
 	                'div',
@@ -23142,6 +23146,456 @@
 	}(_react2.default.Component);
 
 	module.exports = Menu;
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _getPrototypeOf = __webpack_require__(179);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(205);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(206);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(210);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(257);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Description = function (_React$Component) {
+	  (0, _inherits3.default)(Description, _React$Component);
+
+	  function Description() {
+	    (0, _classCallCheck3.default)(this, Description);
+	    return (0, _possibleConstructorReturn3.default)(this, (Description.__proto__ || (0, _getPrototypeOf2.default)(Description)).apply(this, arguments));
+	  }
+
+	  (0, _createClass3.default)(Description, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'ph3 ph5-ns bg-near-white pb5' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'cf mw9 center tc-m' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'pb3 pb4-ns pt4 pt5-ns mt4 fl-l w-50-l v-mid' },
+	            _react2.default.createElement(
+	              'h1',
+	              { className: 'tc' },
+	              'HACKTIVcast'
+	            ),
+	            _react2.default.createElement(
+	              'h2',
+	              { className: 'f5 tc fw4' },
+	              'Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'fl-l center w-50-l tl tc-ns pt3 pt4-m pt6-l' },
+	            _react2.default.createElement('img', { src: 'http://placehold.it/256' })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	  return Description;
+	}(_react2.default.Component);
+
+	module.exports = Description;
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _getPrototypeOf = __webpack_require__(179);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(205);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(206);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(210);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(257);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Show = __webpack_require__(269);
+
+	var Shows = function (_React$Component) {
+	  (0, _inherits3.default)(Shows, _React$Component);
+
+	  function Shows() {
+	    (0, _classCallCheck3.default)(this, Shows);
+	    return (0, _possibleConstructorReturn3.default)(this, (Shows.__proto__ || (0, _getPrototypeOf2.default)(Shows)).apply(this, arguments));
+	  }
+
+	  (0, _createClass3.default)(Shows, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'article',
+	        { className: 'bt b--black-10 bg-washed-blue mid-gray ph3 ph5-ns pv4 pv5-ns' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'mw9 center' },
+	          _react2.default.createElement(
+	            'h3',
+	            { className: 'mt0 f5 f3-ns' },
+	            'Shows'
+	          ),
+	          _react2.default.createElement(Show, null)
+	        )
+	      );
+	    }
+	  }]);
+	  return Shows;
+	}(_react2.default.Component);
+
+	module.exports = Shows;
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _getPrototypeOf = __webpack_require__(179);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(205);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(206);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(210);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(257);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Footer = function (_React$Component) {
+	  (0, _inherits3.default)(Footer, _React$Component);
+
+	  function Footer() {
+	    (0, _classCallCheck3.default)(this, Footer);
+	    return (0, _possibleConstructorReturn3.default)(this, (Footer.__proto__ || (0, _getPrototypeOf2.default)(Footer)).apply(this, arguments));
+	  }
+
+	  (0, _createClass3.default)(Footer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'footer',
+	        { style: { backgroundImage: 'url(http://i.giphy.com/5lF3pQpdquCBy.gif)' }, className: 'tc-l bg-center cover bg-black' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'w-100 ph3 pv5 bg-black-80' },
+	          _react2.default.createElement(
+	            'a',
+	            {
+	              className: 'link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2',
+	              href: 'https://facebook.com/hacktiv8id',
+	              title: 'Facebook',
+	              target: '_blank' },
+	            _react2.default.createElement(
+	              'svg',
+	              {
+	                className: 'dib h2 w2',
+	                fill: 'currentColor',
+	                xmlns: 'http://www.w3.org/2000/svg',
+	                viewBox: '0 0 16 16',
+	                fillRule: 'evenodd',
+	                clipRule: 'evenodd',
+	                strokeLinejoin: 'round',
+	                strokeMiterlimit: '1.414' },
+	              _react2.default.createElement('path', { d: 'M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0',
+	                fillRule: 'nonzero' }),
+	              ' '
+	            ),
+	            ' ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'f6 ml3 pr2' },
+	              'Facebook'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            {
+	              className: 'link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2',
+	              href: 'https://github.com/hacktiv8',
+	              title: 'GitHub',
+	              target: '_blank' },
+	            _react2.default.createElement(
+	              'svg',
+	              {
+	                className: 'dib h2 w2',
+	                fill: 'currentColor',
+	                xmlns: 'http://www.w3.org/2000/svg',
+	                viewBox: '0 0 16 16',
+	                fillRule: 'evenodd',
+	                clipRule: 'evenodd',
+	                strokeLinejoin: 'round',
+	                strokeMiterlimit: '1.414' },
+	              _react2.default.createElement('path', { d: 'M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8'
+	              }),
+	              ' '
+	            ),
+	            ' ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'f6 ml3 pr2' },
+	              'GitHub'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            {
+	              className: 'link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2',
+	              href: 'https://instagram.com/hacktiv8id',
+	              target: '_blank',
+	              title: 'Instagram' },
+	            _react2.default.createElement(
+	              'svg',
+	              {
+	                className: 'dib h2 w2',
+	                fill: 'currentColor',
+	                xmlns: 'http://www.w3.org/2000/svg',
+	                viewBox: '0 0 16 16',
+	                fillRule: 'evenodd',
+	                clipRule: 'evenodd',
+	                strokeLinejoin: 'round',
+	                strokeMiterlimit: '1.414' },
+	              _react2.default.createElement('path', { d: 'M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.048 3.233c-.036.78-.166 1.203-.276 1.485-.145.374-.318.64-.598.92-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.844.038-1.097.047-3.233.047s-2.39-.01-3.233-.048c-.78-.036-1.203-.166-1.485-.276-.374-.145-.64-.318-.92-.598-.28-.28-.453-.546-.598-.92-.11-.282-.24-.705-.276-1.485C1.45 10.39 1.44 10.136 1.44 8s.01-2.39.048-3.233c.036-.78.166-1.203.276-1.485.145-.374.318-.64.598-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276C5.61 1.45 5.864 1.44 8 1.44zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z'
+	              }),
+	              ' '
+	            ),
+	            ' ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'f6 ml3 pr2' },
+	              'Instagram'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            {
+	              className: 'link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2',
+	              href: 'https://www.youtube.com/channel/UCyTOwW6s6zmGGFGmLDkfp2w',
+	              target: '_blank',
+	              title: 'youtube' },
+	            _react2.default.createElement(
+	              'svg',
+	              {
+	                className: 'dib w2 h2',
+	                fill: 'currentColor',
+	                xmlns: 'http://www.w3.org/2000/svg',
+	                viewBox: '0 0 16 16',
+	                fillRule: 'evenodd',
+	                clipRule: 'evenodd',
+	                strokeLinejoin: 'round',
+	                strokeMiterlimit: '1.414' },
+	              _react2.default.createElement('path', { d: 'M0 7.345c0-1.294.16-2.59.16-2.59s.156-1.1.636-1.587c.608-.637 1.408-.617 1.764-.684C3.84 2.36 8 2.324 8 2.324s3.362.004 5.6.166c.314.038.996.04 1.604.678.48.486.636 1.588.636 1.588S16 6.05 16 7.346v1.258c0 1.296-.16 2.59-.16 2.59s-.156 1.102-.636 1.588c-.608.638-1.29.64-1.604.678-2.238.162-5.6.166-5.6.166s-4.16-.037-5.44-.16c-.356-.067-1.156-.047-1.764-.684-.48-.487-.636-1.587-.636-1.587S0 9.9 0 8.605v-1.26zm6.348 2.73V5.58l4.323 2.255-4.32 2.24h-.002z'
+	              }),
+	              ' '
+	            ),
+	            ' ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'f6 ml3 pr2' },
+	              'Youtube'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { className: 'link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2', href: 'https://www.linkedin.com/company/10524811', title: 'LinkedIn' },
+	            _react2.default.createElement(
+	              'svg',
+	              {
+	                className: 'dib h2 w2',
+	                fill: 'currentColor',
+	                xmlns: 'http://www.w3.org/2000/svg',
+	                viewBox: '0 0 16 16',
+	                fillRule: 'evenodd',
+	                clipRule: 'evenodd',
+	                strokeLinejoin: 'round',
+	                strokeMiterlimit: '1.414' },
+	              _react2.default.createElement('path', { d: 'M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51V7.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z',
+	                fillRule: 'nonzero' }),
+	              ' '
+	            ),
+	            ' ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'f6 ml3 pr2' },
+	              'LinkedIn'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            {
+	              className: 'link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2',
+	              href: 'https://twitter.com/hacktiv8id',
+	              target: '_blank',
+	              title: 'Twitter' },
+	            _react2.default.createElement(
+	              'svg',
+	              {
+	                className: 'dib h2 w2',
+	                fill: 'currentColor',
+	                xmlns: 'http://www.w3.org/2000/svg',
+	                viewBox: '0 0 16 16',
+	                fillRule: 'evenodd',
+	                clipRule: 'evenodd',
+	                strokeLinejoin: 'round',
+	                strokeMiterlimit: '1.414' },
+	              _react2.default.createElement('path', { d: 'M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z',
+	                fillRule: 'nonzero' }),
+	              ' '
+	            ),
+	            ' ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'f6 ml3 pr2' },
+	              'Twitter'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	  return Footer;
+	}(_react2.default.Component);
+
+	module.exports = Footer;
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _getPrototypeOf = __webpack_require__(179);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(205);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(206);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(210);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(257);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Show = function (_React$Component) {
+	  (0, _inherits3.default)(Show, _React$Component);
+
+	  function Show() {
+	    (0, _classCallCheck3.default)(this, Show);
+	    return (0, _possibleConstructorReturn3.default)(this, (Show.__proto__ || (0, _getPrototypeOf2.default)(Show)).apply(this, arguments));
+	  }
+
+	  (0, _createClass3.default)(Show, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'tc' },
+	          _react2.default.createElement('img', { className: 'br-100 dib', src: 'http://placehold.it/128', alt: '' }),
+	          _react2.default.createElement(
+	            'h4',
+	            { className: 'f4' },
+	            'HACKTIVcast Series'
+	          ),
+	          _react2.default.createElement('hr', { className: 'mw3 bb bw1 b--black-10' })
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'lh-copy measure center f6 near-gray' },
+	          'Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'pv4 ph2 tc-l' },
+	          _react2.default.createElement(
+	            'a',
+	            { href: '#', className: 'f6 tc link dim br-pill ph5 pv3 mb2 dib white bg-gold' },
+	            'Watch'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	  return Show;
+	}(_react2.default.Component);
+
+	module.exports = Show;
 
 /***/ }
 /******/ ]);
