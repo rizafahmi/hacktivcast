@@ -21501,7 +21501,7 @@
 
 	var Menu = __webpack_require__(265);
 	var Description = __webpack_require__(266);
-	var Shows = __webpack_require__(267);
+	var Shows = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Shows.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	var Footer = __webpack_require__(268);
 
 	var App = function (_React$Component) {
@@ -23225,72 +23225,7 @@
 	module.exports = Description;
 
 /***/ },
-/* 267 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _getPrototypeOf = __webpack_require__(179);
-
-	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-
-	var _classCallCheck2 = __webpack_require__(205);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(206);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(210);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(257);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Show = __webpack_require__(269);
-
-	var Shows = function (_React$Component) {
-	  (0, _inherits3.default)(Shows, _React$Component);
-
-	  function Shows() {
-	    (0, _classCallCheck3.default)(this, Shows);
-	    return (0, _possibleConstructorReturn3.default)(this, (Shows.__proto__ || (0, _getPrototypeOf2.default)(Shows)).apply(this, arguments));
-	  }
-
-	  (0, _createClass3.default)(Shows, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'article',
-	        { className: 'bt b--black-10 bg-washed-blue mid-gray ph3 ph5-ns pv4 pv5-ns' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'mw9 center' },
-	          _react2.default.createElement(
-	            'h3',
-	            { className: 'mt0 f5 f3-ns' },
-	            'Shows'
-	          ),
-	          _react2.default.createElement(Show, null)
-	        )
-	      );
-	    }
-	  }]);
-	  return Shows;
-	}(_react2.default.Component);
-
-	module.exports = Shows;
-
-/***/ },
+/* 267 */,
 /* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -23517,85 +23452,6 @@
 	}(_react2.default.Component);
 
 	module.exports = Footer;
-
-/***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _getPrototypeOf = __webpack_require__(179);
-
-	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-
-	var _classCallCheck2 = __webpack_require__(205);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(206);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(210);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(257);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Show = function (_React$Component) {
-	  (0, _inherits3.default)(Show, _React$Component);
-
-	  function Show() {
-	    (0, _classCallCheck3.default)(this, Show);
-	    return (0, _possibleConstructorReturn3.default)(this, (Show.__proto__ || (0, _getPrototypeOf2.default)(Show)).apply(this, arguments));
-	  }
-
-	  (0, _createClass3.default)(Show, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'tc' },
-	          _react2.default.createElement('img', { className: 'br-100 dib', src: 'http://placehold.it/128', alt: '' }),
-	          _react2.default.createElement(
-	            'h4',
-	            { className: 'f4' },
-	            'HACKTIVcast Series'
-	          ),
-	          _react2.default.createElement('hr', { className: 'mw3 bb bw1 b--black-10' })
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          { className: 'lh-copy measure center f6 near-gray' },
-	          'Sebuah screencast series tentang pemrograman NodeJS, JavaScript, GIT, GitHub, VIM, editor dan teknologi lain yang terkait.'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'pv4 ph2 tc-l' },
-	          _react2.default.createElement(
-	            'a',
-	            { href: '#', className: 'f6 tc link dim br-pill ph5 pv3 mb2 dib white bg-gold' },
-	            'Watch'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	  return Show;
-	}(_react2.default.Component);
-
-	module.exports = Show;
 
 /***/ }
 /******/ ]);
