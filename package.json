@@ -9,7 +9,7 @@
     "test": "mocha",
     "test:watch": "mocha --watch ./test/backend/",
     "webpack:watch": "webpack -w",
-    "test:react": "mocha ./test/.setup.js --watch ./test/frontend/*.js"
+    "test:react": "mocha --require ./test/.setup.js --watch ./test/frontend/*.js"
   },
   "dependencies": {
     "axios": "0.15.3",
