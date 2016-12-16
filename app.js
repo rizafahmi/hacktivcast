@@ -23,7 +23,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
-app.use('/antd', express.static(path.join(__dirname, 'node_modules/antd')))
+app.use('/vendors', express.static(path.join(__dirname, 'node_modules/tachyons')))
 
 app.use('/', frontend)
 app.use('/api/v1', api)

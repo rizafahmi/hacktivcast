@@ -21516,7 +21516,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: '' },
 	        _react2.default.createElement(Menu, null)
 	      );
 	    }
@@ -23100,9 +23100,41 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'h3',
-	        null,
-	        'THis is some menu'
+	        'header',
+	        { className: 'w-100 pa3 ph5-ns bg-gold' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'db dt-ns mw9 center w-100' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'db dtc-ns v-mid tl w-50' },
+	            _react2.default.createElement(
+	              'a',
+	              { className: 'dib f5 f4-ns fw6 mt0 mb1 link mid-gray', href: '/' },
+	              'HACKTIVcast ',
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'dib' },
+	                ' ',
+	                _react2.default.createElement(
+	                  'small',
+	                  { className: 'nowrap f6 mt2 mt3-ns pr2 mid-gray fw2' },
+	                  'by HACKTIV8'
+	                ),
+	                ' '
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'nav',
+	            { className: 'db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns' },
+	            _react2.default.createElement(
+	              'a',
+	              { className: 'f6 fw6 hover-blue link mid-gray mr2 mr3-m mr4-l br-pill bg-white pa2 pl3 pr3', href: '#' },
+	              'Join Bootcamp'
+	            )
+	          )
+	        )
 	      );
 	    }
 	  }]);
